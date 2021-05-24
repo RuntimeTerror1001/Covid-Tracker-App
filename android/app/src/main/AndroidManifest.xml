@@ -2,7 +2,7 @@
     package="com.example.covid_app2">
 
    <application
-        android:label="covid_app2"
+        android:label="CoviTracker"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
