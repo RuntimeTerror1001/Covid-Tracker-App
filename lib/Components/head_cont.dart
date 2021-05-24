@@ -20,7 +20,7 @@ class HeadCont extends StatelessWidget {
               gradient: LinearGradient(
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
-                colors: [Color(0XFF3383CD), Color(0XFF11249F)],
+                colors: [Colors.red, Color(0XFF11249F)],
               ),
               image: DecorationImage(
                 image: AssetImage('assets/images/virus.png'),
@@ -81,3 +81,5 @@ class HeadCont extends StatelessWidget {
     );
   }
 }
+
+// Color(0XFF3383CD)
