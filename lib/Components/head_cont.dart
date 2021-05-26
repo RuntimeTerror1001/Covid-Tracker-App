@@ -6,6 +6,12 @@ import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HeadCont extends StatelessWidget {
+  HeadCont({this.image, this.text, this.cheight});
+
+  final String image;
+  final String text;
+  final double cheight;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -15,7 +21,7 @@ class HeadCont extends StatelessWidget {
           child: Container(
             padding: EdgeInsets.only(left: 40, top: 50, right: 20),
             width: double.infinity,
-            height: 300,
+            height: cheight,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topRight,
@@ -29,18 +35,11 @@ class HeadCont extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Align(
-                  alignment: Alignment.topRight,
-                  child: SvgPicture.asset('assets/icons/menu.svg'),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
                 Expanded(
                   child: Stack(
                     children: [
                       SvgPicture.asset(
-                        'assets/icons/Drcorona.svg',
+                        image,
                         width: 230,
                         fit: BoxFit.fitWidth,
                         alignment: Alignment.topCenter,
@@ -49,7 +48,7 @@ class HeadCont extends StatelessWidget {
                         top: 40,
                         left: 150,
                         child: Text(
-                          'All you need to do \nis to stay home !!',
+                          text,
                           style: GoogleFonts.redressed(
                             textStyle: kHeadingTextStyle.copyWith(
                               color: Colors.white,
