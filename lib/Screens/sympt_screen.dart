@@ -1,3 +1,4 @@
+import 'package:covid_app2/Components/cont_box.dart';
 import 'package:covid_app2/Components/head_cont.dart';
 import 'package:covid_app2/constants.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class _SymptScreenState extends State<SymptScreen> {
         [
           HeadCont(
             image: 'assets/icons/coronadr.svg',
-            text: 'Get to know\nAbout COVID-19',
+            text: 'The Symptoms\nOf COVID-19',
             cheight: 250,
           ),
           15.heightBox,
@@ -29,74 +30,35 @@ class _SymptScreenState extends State<SymptScreen> {
             ),
           ),
           10.heightBox,
-          SympBox(
+          ContBox(
             image: 'assets/images/headache.png',
             head: 'Fatigue',
             text:
-                'Fatigue can be described as the lack \nof energy and motivation \n(both physical and mental).',
+                'Fatigue can be described as the\nlack of energy and motivation \n(both physical and mental).',
+            imgheight: 90,
+            gap: 15,
           ),
           10.heightBox,
-          SympBox(
+          ContBox(
             image: 'assets/images/caugh.png',
             head: 'Cough',
             text:
-                'A cough is a forceful release of air \nfrom the lungs that can be heard.',
+                'A cough is a forceful release\nof air from the lungs that can \nbe heard.',
+            imgheight: 90,
+            gap: 15,
           ),
           10.heightBox,
-          SympBox(
+          ContBox(
             image: 'assets/images/fever.png',
             head: 'Fever',
             text:
-                'A person has a fever if their body \ntemperature rises above the normal \nrange of 98–100°F (36–37°C).',
+                'A person has a fever if their\nbody temperature rises \nabove the normal range of \n98–100°F (36–37°C).',
+            imgheight: 90,
+            gap: 15,
           ),
         ],
         crossAlignment: CrossAxisAlignment.start,
       ).scrollVertical(),
-    );
-  }
-}
-
-class SympBox extends StatelessWidget {
-  SympBox({this.image, this.head, this.text});
-
-  final String image;
-  final String head;
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 5,
-            color: kBodyTextColor.withOpacity(0.3),
-          )
-        ],
-      ),
-      child: Row(
-        children: [
-          Column(
-            children: <Widget>[
-              Image.asset(image, height: 90),
-              Text(
-                head,
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-            ],
-          ),
-          15.widthBox,
-          Container(
-            child: Text(
-              text,
-              style: TextStyle(fontSize: 15),
-            ),
-          )
-        ],
-      ),
     );
   }
 }

@@ -1,6 +1,7 @@
+import 'Screens/prev_screen.dart';
 import 'Screens/sympt_screen.dart';
-import 'package:covid_app2/constants.dart';
 import 'Screens/home_screen.dart';
+import 'package:covid_app2/constants.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
       // initialRoute: HomeScreen.id,
       // routes: {
       //   HomeScreen.id: (context) => HomeScreen(),
-      //   InfoScreen.id: (context) => InfoScreen()
+      //   InfoScreen.id: (context) => InfoScreen(),
+      //   PrevScreen.id: (context) => PrevScreen(),
       // },
     );
   }

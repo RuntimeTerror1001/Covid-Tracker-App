@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 // Colors
 const kBackgroundColor = Color(0xFFFEFEFE);
@@ -20,10 +21,6 @@ const kHeadingTextStyle = TextStyle(
 
 const kSubTextStyle = TextStyle(fontSize: 16, color: kTextLightColor);
 
-const kTitleTextstyle = TextStyle(
-  fontSize: 18,
-  color: kTitleTextColor,
-  fontWeight: FontWeight.bold,
-);
+var kTitleTextstyle = GoogleFonts.lora(fontWeight: FontWeight.w500);
 
 const kContList = ['India', 'USA', 'UK'];
