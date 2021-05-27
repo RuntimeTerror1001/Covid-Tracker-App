@@ -20,7 +20,6 @@ dependencies:
   google_fonts: ^2.0.0
   velocity_x: ^2.6.1
   http: ^0.13.1
-  curved_navigation_bar: ^0.3.7
   intl:
 
 dev_dependencies:

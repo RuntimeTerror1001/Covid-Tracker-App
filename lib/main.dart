@@ -1,6 +1,7 @@
 import 'Screens/prev_screen.dart';
 import 'Screens/sympt_screen.dart';
 import 'Screens/home_screen.dart';
+import 'package:covid_app2/Components/drawer.dart';
 import 'package:covid_app2/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: kBackgroundColor,
       ),
-      home: Scaffold(body: SymptScreen()),
+      home: Scaffold(body: NDrawer()),
       // initialRoute: HomeScreen.id,
       // routes: {
       //   HomeScreen.id: (context) => HomeScreen(),

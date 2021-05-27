@@ -35,6 +35,10 @@ class HeadCont extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                GestureDetector(
+                  onTap: () {},
+                  child: SvgPicture.asset("assets/icons/menu.svg"),
+                ),
                 Expanded(
                   child: Stack(
                     children: [

@@ -5,7 +5,6 @@ import 'package:velocity_x/velocity_x.dart';
 import 'package:covid_app2/Components/head_cont.dart';
 import 'package:intl/intl.dart';
 import 'package:covid_app2/constants.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String id = 'home_screen';
@@ -20,27 +19,16 @@ class _HomeScreenState extends State<HomeScreen> {
     String date = DateFormat('MMMMd').format(now);
 
     return Scaffold(
-      bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Color(0xFF3382CC),
-        items: <Widget>[
-          Icon(Icons.add, size: 30),
-          Icon(Icons.list, size: 30),
-          Icon(Icons.compare_arrows, size: 30),
-        ],
-        onTap: (index) {
-          //Handle button tap
-        },
-      ),
       body: VStack(
         [
           HeadCont(
             image: 'assets/icons/Drcorona.svg',
             text: 'All you need to do \nis to stay home !!',
-            cheight: 260,
+            cheight: 300,
           ),
-          10.heightBox,
+          30.heightBox,
           MidText(date: date),
-          10.heightBox,
+          20.heightBox,
           BottomContainer(),
         ],
         crossAlignment: CrossAxisAlignment.start,
@@ -65,9 +53,9 @@ class MidText extends StatelessWidget {
         text: TextSpan(
           children: [
             TextSpan(
-              text: 'Case Update\n',
-              style: kTitleTextstyle,
-            ),
+                text: 'Case Update\n',
+                style: kTitleTextstyle.copyWith(
+                    fontSize: 18, color: kTitleTextColor)),
             TextSpan(text: date, style: TextStyle(color: kTextLightColor)),
           ],
         ),
