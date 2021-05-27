@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class SymptScreen extends StatefulWidget {
-  static const String id = 'info_screen';
+  static const String id = 'sympt_screen';
   @override
   _SymptScreenState createState() => _SymptScreenState();
 }
@@ -20,6 +20,10 @@ class _SymptScreenState extends State<SymptScreen> {
             image: 'assets/icons/coronadr.svg',
             text: 'The Symptoms\nOf COVID-19',
             cheight: 250,
+            child: Icon(Icons.arrow_back_ios, color: Colors.white),
+            onTap: () {
+              Navigator.pop(context);
+            },
           ),
           15.heightBox,
           Padding(

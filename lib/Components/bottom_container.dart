@@ -30,7 +30,6 @@ class _BottomContainerState extends State<BottomContainer> {
       totcrit = data['critical'];
       todinf = data['todayCases'];
     });
-    // print(totinf);
   }
 
   DropdownButton<String> dropDown() {

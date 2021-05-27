@@ -1,9 +1,12 @@
-import 'package:covid_app2/constants.dart';
+import 'package:covid_app2/Screens/prev_screen.dart';
+import 'package:covid_app2/Screens/sympt_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:covid_app2/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class NDrawer extends StatefulWidget {
+  static const String id = 'welcome_screen';
   @override
   _NDrawerState createState() => _NDrawerState();
 }
@@ -25,7 +28,6 @@ class _NDrawerState extends State<NDrawer> {
           ),
           SafeArea(
             child: Container(
-              // width: double.infinity,
               height: double.infinity,
               padding: EdgeInsets.all(8),
               child: Column(
@@ -33,26 +35,36 @@ class _NDrawerState extends State<NDrawer> {
                 children: [
                   Image.asset(
                     'assets/icons/docback.png',
-                    height: 250,
-                    width: 250,
+                    height: 300,
+                    width: 300,
                   ),
                   5.heightBox,
                   'CoviTracker'
                       .text
-                      .xl3
+                      .xl5
                       .bold
                       .textStyle(kTitleTextstyle)
                       .make()
                       .shimmer(primaryColor: kPrimaryColor),
-                  50.heightBox,
+                  30.heightBox,
                   Expanded(
                     child: ListView(
                       physics: NeverScrollableScrollPhysics(),
                       children: [
-                        ListItem(i: Icons.home, title: 'Home'),
                         ListItem(
-                            i: Icons.notification_important, title: 'Symptoms'),
-                        ListItem(i: Icons.gpp_good, title: 'Prevention'),
+                          i: Icons.notification_important,
+                          title: 'Symptoms',
+                          tap: () {
+                            Navigator.pushNamed(context, SymptScreen.id);
+                          },
+                        ),
+                        ListItem(
+                          i: Icons.gpp_good,
+                          title: 'Prevention',
+                          tap: () {
+                            Navigator.pushNamed(context, PrevScreen.id);
+                          },
+                        ),
                       ],
                     ),
                   ),
@@ -79,7 +91,7 @@ class ListItem extends StatelessWidget {
       leading: Icon(
         i,
         color: Colors.white,
-        size: 35,
+        size: 40,
       ),
       title: title.text.white.textStyle(GoogleFonts.poppins()).make(),
       onTap: tap,

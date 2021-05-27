@@ -20,6 +20,10 @@ class _PrevScreenState extends State<PrevScreen> {
             image: 'assets/icons/maskdoctor.svg',
             text: 'The Prevention\nOf COVID-19',
             cheight: 300,
+            child: Icon(Icons.arrow_back_ios, color: Colors.white),
+            onTap: () {
+              Navigator.pop(context);
+            },
           ),
           15.heightBox,
           Padding(

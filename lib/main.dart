@@ -14,17 +14,22 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'COVID-19 Demo App',
+      title: 'CoviTracker',
       theme: ThemeData(
         scaffoldBackgroundColor: kBackgroundColor,
       ),
-      home: Scaffold(body: NDrawer()),
-      // initialRoute: HomeScreen.id,
-      // routes: {
-      //   HomeScreen.id: (context) => HomeScreen(),
-      //   InfoScreen.id: (context) => InfoScreen(),
-      //   PrevScreen.id: (context) => PrevScreen(),
-      // },
+      home: Scaffold(
+        body: Stack(children: [
+          NDrawer(),
+          HomeScreen(),
+        ]),
+      ),
+      routes: {
+        NDrawer.id: (context) => NDrawer(),
+        HomeScreen.id: (context) => HomeScreen(),
+        SymptScreen.id: (context) => SymptScreen(),
+        PrevScreen.id: (context) => PrevScreen(),
+      },
     );
   }
 }
