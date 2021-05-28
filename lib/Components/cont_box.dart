@@ -34,7 +34,7 @@ class ContBox extends StatelessWidget {
               Image.asset(image, height: imgheight),
               Text(
                 head,
-                style: GoogleFonts.poppins(fontSize: 15),
+                style: GoogleFonts.lato(fontSize: 16),
               ),
             ],
           ),
