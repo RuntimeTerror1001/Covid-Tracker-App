@@ -1,9 +1,12 @@
 import 'package:covid_app2/Screens/prev_screen.dart';
 import 'package:covid_app2/Screens/sympt_screen.dart';
+import 'package:covid_app2/Screens/test_screen.dart';
+import 'package:covid_app2/Screens/vaccine_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:covid_app2/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class NDrawer extends StatefulWidget {
   static const String id = 'welcome_screen';
@@ -58,11 +61,28 @@ class _NDrawerState extends State<NDrawer> {
                             Navigator.pushNamed(context, SymptScreen.id);
                           },
                         ),
+                        15.heightBox,
                         ListItem(
                           i: Icons.gpp_good,
                           title: 'Prevention',
                           tap: () {
                             Navigator.pushNamed(context, PrevScreen.id);
+                          },
+                        ),
+                        15.heightBox,
+                        ListItem(
+                          i: FontAwesomeIcons.vial,
+                          title: 'Tests',
+                          tap: () {
+                            Navigator.pushNamed(context, TestScreen.id);
+                          },
+                        ),
+                        15.heightBox,
+                        ListItem(
+                          i: FontAwesomeIcons.syringe,
+                          title: 'Vaccination',
+                          tap: () {
+                            Navigator.pushNamed(context, VaccineScreen.id);
                           },
                         ),
                       ],

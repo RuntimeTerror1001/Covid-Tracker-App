@@ -1,6 +1,6 @@
 import 'package:covid_app2/Components/cont_box.dart';
 import 'package:covid_app2/Components/head_cont.dart';
-import 'package:covid_app2/constants.dart';
+import 'package:covid_app2/Components/title_text.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -19,20 +19,13 @@ class _SymptScreenState extends State<SymptScreen> {
           HeadCont(
             image: 'assets/icons/coronadr.svg',
             text: 'The Symptoms\nOf COVID-19',
-            cheight: 250,
             child: Icon(Icons.arrow_back_ios, color: Colors.white),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           15.heightBox,
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Text(
-              "Symptoms",
-              style: kTitleTextstyle.copyWith(fontSize: 20),
-            ),
-          ),
+          TitleText(text: 'Symptoms'),
           10.heightBox,
           ContBox(
             image: 'assets/images/headache.png',

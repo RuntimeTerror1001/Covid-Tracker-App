@@ -50,3 +50,41 @@ class ContBox extends StatelessWidget {
     );
   }
 }
+
+class ContBox2 extends StatelessWidget {
+  ContBox2({this.head, this.text});
+
+  final String head;
+  final String text;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            offset: Offset(0, 0),
+            blurRadius: 24,
+            color: kActiveShadowColor,
+          )
+        ],
+      ),
+      child: RichText(
+        text: TextSpan(
+          children: [
+            TextSpan(
+              text: head,
+              style: GoogleFonts.lato(fontSize: 18, color: Colors.black54),
+            ),
+            TextSpan(
+              text: text,
+              style: GoogleFonts.poppins(fontSize: 16, color: Colors.black38),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

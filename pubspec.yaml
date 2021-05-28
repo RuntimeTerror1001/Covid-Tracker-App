@@ -21,6 +21,7 @@ dependencies:
   velocity_x: ^2.6.1
   http: ^0.13.1
   intl:
+  font_awesome_flutter: ^9.0.0
 
 dev_dependencies:
   flutter_test:

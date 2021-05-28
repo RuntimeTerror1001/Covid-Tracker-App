@@ -21,6 +21,6 @@ const kHeadingTextStyle = TextStyle(
 
 const kSubTextStyle = TextStyle(fontSize: 16, color: kTextLightColor);
 
-var kTitleTextstyle = GoogleFonts.lora(fontWeight: FontWeight.w500);
+var kTitleTextstyle = GoogleFonts.lora(fontWeight: FontWeight.w700);
 
 const kContList = ['India', 'USA', 'UK'];

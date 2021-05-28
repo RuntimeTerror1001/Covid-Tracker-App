@@ -136,10 +136,7 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 class MidText extends StatelessWidget {
-  const MidText({
-    Key key,
-    @required this.date,
-  }) : super(key: key);
+  const MidText({@required this.date});
 
   final String date;
 

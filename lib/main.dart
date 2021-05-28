@@ -5,6 +5,9 @@ import 'package:covid_app2/Components/drawer.dart';
 import 'package:covid_app2/constants.dart';
 import 'package:flutter/material.dart';
 
+import 'Screens/test_screen.dart';
+import 'Screens/vaccine_screen.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -29,6 +32,8 @@ class MyApp extends StatelessWidget {
         HomeScreen.id: (context) => HomeScreen(),
         SymptScreen.id: (context) => SymptScreen(),
         PrevScreen.id: (context) => PrevScreen(),
+        TestScreen.id: (context) => TestScreen(),
+        VaccineScreen.id: (context) => VaccineScreen(),
       },
     );
   }

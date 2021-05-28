@@ -1,6 +1,6 @@
 import 'package:covid_app2/Components/cont_box.dart';
 import 'package:covid_app2/Components/head_cont.dart';
-import 'package:covid_app2/constants.dart';
+import 'package:covid_app2/Components/title_text.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -19,20 +19,14 @@ class _PrevScreenState extends State<PrevScreen> {
           HeadCont(
             image: 'assets/icons/maskdoctor.svg',
             text: 'The Prevention\nOf COVID-19',
-            cheight: 300,
             child: Icon(Icons.arrow_back_ios, color: Colors.white),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           15.heightBox,
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Text(
-              "Prevention",
-              style: kTitleTextstyle.copyWith(fontSize: 20),
-            ),
-          ),
+          TitleText(text: 'Prevention'),
+          10.heightBox,
           VStack(
             [
               ContBox(
